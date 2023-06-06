@@ -1,0 +1,17 @@
+.carouselContainer {
+  border-radius: 8px;
+  width: 100%; 
+
+}
+
+img {
+  width: 100%;  
+  height: 800px;
+}
+
+.carouselLegend {
+  display: none;
+}
+
+
+
