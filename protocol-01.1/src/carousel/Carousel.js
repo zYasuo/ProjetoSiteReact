@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,10 +8,10 @@ import Banner2 from '../img/img-carousel/Banner2.jpg';
 import Banner3 from '../img/img-carousel/Banner3.jpg';
 
 const MyCarousel = () => {
-  const carouselRef = useRef(null);
+  const sliderRef = useRef();
 
   useEffect(() => {
-    carouselRef.current.slickGoTo(0);
+    sliderRef.current.slickGoTo(0);
   }, []);
 
   const settings = {
@@ -26,7 +26,7 @@ const MyCarousel = () => {
 
   return (
     <div className={styles.carouselContainer}>
-      <Slider {...settings} ref={carouselRef} className={styles.carousel}>
+      <Slider {...settings} ref={sliderRef} className={styles.carousel}>
         <div className={styles.carouselItem}>
           <img src={Banner1} alt="Slide 1" className={styles.carouselImage} />
           <p className={`legend ${styles.carouselLegend}`}>Banner 1</p>
