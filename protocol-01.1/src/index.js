@@ -1,21 +1,22 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import Menu from './menu/Menu.js';
-import MyCarousel from './carousel/Carousel.js';
-
+import ReactDOM from 'react-dom';
+import HeaderMenu from './menu/HeaderMenu';
+import MyCarousel from './carousel/Carousel';
+import './App.css';
 
 function App() {
   return (
     <div className="app-container">
-      <div className="menu-container">
-        <Menu />
+      <HeaderMenu className="header-menu" />
+      <div className="carousel-container">
+        <MyCarousel />
       </div>
-      <MyCarousel />
     </div>
   );
 }
 
+
 const root = document.getElementById('root');
 if (root !== null) {
-  createRoot(root).render(<App />);
+  ReactDOM.render(<App />, root);
 }

@@ -1,0 +1,105 @@
+/* HeaderMenu.module.css */
+
+.menuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  max-width: 100%;
+  padding: 2em;
+  background-color: #0066FF;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menuContainer img {
+  height: 90px;
+  position: absolute;
+  left: 2em;
+  width: 150px;
+}
+
+.menuItems {
+  display: flex;
+  gap: 20px;
+  padding: 0.9em;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  color: white;
+  background-color: #0066FF;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #0066FF;
+  color: #fff;
+}
+
+.logo {
+  height: 90px;
+  position: absolute;
+  left: 2em;
+  width: 150px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+@media screen and (max-width: 480px) {
+  .menuItems {
+    display: none;
+  }
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .hamburgerMenu {
+    display: flex;
+  }
+}
+
+.iconAlign {
+  vertical-align: middle;
+}

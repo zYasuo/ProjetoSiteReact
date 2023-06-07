@@ -79,6 +79,24 @@ body {
     text-decoration: none;
     display: block;
   }
+
+  @media screen and (max-width: 480px) {
+    .menuItems {
+      display: none;
+    }
+  }
+  
+  /* Initially hide the hamburger menu */
+  .hamburgerMenu {
+    display: none;
+  }
+  
+  /* Display the hamburger menu when the screen width is 480px or less */
+  @media screen and (max-width: 480px) {
+    .hamburgerMenu {
+      display: flex;
+    }
+  }
   
   .dropdown:hover .dropdownContent {
     display: block;

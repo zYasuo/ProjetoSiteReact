@@ -1,17 +1,24 @@
+
 .carouselContainer {
   border-radius: 8px;
   width: 100%; 
-
 }
 
-img {
+.carouselContainer img {
   width: 100%;  
   height: 800px;
+}
+
+.hide-arrow {
+  display: none !important;
 }
 
 .carouselLegend {
   display: none;
 }
 
-
-
+@media (max-width: 768px) {
+  .carouselContainer img {
+    height: 500px; 
+  }
+}
