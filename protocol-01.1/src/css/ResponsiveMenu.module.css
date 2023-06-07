@@ -1,0 +1,62 @@
+/* ResponsiveMenu.module.css */
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
+    background-color: #0066FF;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .menuContainer img {
+    height: 60px;
+
+    left: 2em;
+    width: 100px;
+  }
+  
+  .hamburgerMenu {
+    display: none; /* escondido por padrão */
+  }
+  
+  .hamburgerIcon {
+    cursor: pointer;
+   color: #fff;
+  }
+  
+  .menuContent {
+    display: none; /* escondido por padrão */
+  }
+  
+/* Menu hambúrguer aparece em telas pequenas */
+@media screen and (max-width: 480px) {
+    .hamburgerMenu {
+      display: block;
+      margin-right: 1em;
+    }
+    .menuContent {
+      display: block;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 250px;
+        background: #333;
+        transition: all 0.3s ease-in-out;
+        padding: 20px;
+      }
+      
+      .sidebar.open {
+        right: 0;
+      }
+
+      
+  }
+  
